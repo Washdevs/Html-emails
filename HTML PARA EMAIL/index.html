@@ -20,59 +20,85 @@
         }
 
         .header {
-            /* Defina a altura fixa */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
             height: 200px;
-            /* Ajuste esse valor conforme necessário */
+            background-color: #4368a3;
             background-size: cover;
-            background-color: #4b5970;
             background-repeat: no-repeat;
-            text-align: center;
-            padding: 0 20px;
-            /* Reduz o padding para ajustar o conteúdo dentro do header */
+            padding: 0px 20px;
             position: relative;
-            /* Para usar position absoluta na imagem */
         }
 
         .header h1 {
             color: #ffffff;
-            font-size: 28px;
+            font-size: 26px;
             margin: 0;
+            position: absolute;
+            left: 50px;
+            top: 90px;
         }
 
         .header h2 {
             color: #ffffff;
-            font-size: 18px;
-            margin-top: 10px;
+            font-size: 16px;
+            margin-top: 15px;
+            position: absolute;
+            left: 50px;
+            top: 120px;
         }
 
         .content {
-            padding: 20px;
+            padding: 0px;
             background-color: #ffffff;
+            text-align: left !important;
+            position: relative;
+            border: 2px solid black;
+            z-index: 2;
+            /* Garanta que content fique acima das outras camadas */
+        }
+
+        .content h3,
+        .content p,
+        .content ul,
+        .content li {
+            margin: 0;
+            padding: 0;
         }
 
         .content h3 {
-            color: #003366;
-            font-size: 20px;
+            color: #5a679c;
+            font-size: 16px;
+            padding-left: 15px;
         }
 
         .content p {
-            color: #333333;
-            line-height: 1.6;
-            font-size: 16px;
+            color: #5a679c;
+            line-height: 1.5;
+            font-size: 12.5px;
+            padding-left: 15px;
         }
 
         .content ul {
-            color: #333333;
+            color: #5a679c;
             line-height: 1.6;
-            font-size: 16px;
-            padding-left: 20px;
+            font-size: 13px;
+            padding-left: 25px;
+        }
+
+        .content li {
+            color: #5a679c;
+            font-size: 12.5px;
+            padding-left: 15px;
         }
 
         .footer {
             text-align: center;
             padding: 20px;
             background-color: #f4f4f4;
-            font-size: 14px;
+            font-size: 12px;
             color: #777777;
         }
 
@@ -91,39 +117,47 @@
             margin-top: 20px;
         }
 
-        /* Estilizando a imagem de fundo e a imagem da mulher com tablet */
         .img-background {
-            position: relative;
             text-align: center;
+            margin-top: 0; /* Elimina qualquer margem adicional */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 515px;
+            overflow: hidden;
+            z-index: 3; /* Ajustado para sobrepor o conteúdo */
         }
 
         .img-background img {
-            width: 100%;
-            max-width: 600px;
+            position: absolute;
+            top: -5px; /* Ajuste a posição para mover a imagem */
+            left: 86.5%;
+            transform: translateX(-50%);
+            width: auto;
+            height: 515px;
+            object-fit: contain;
+            z-index: 4;
         }
 
         .tablet-img {
             position: absolute;
-            /* Coloca a imagem dentro do header */
             top: 50%;
-            /* Centraliza verticalmente */
-            left: 86.3%;
-            /* Centraliza horizontalmente */
+            left: 86.6%;
             transform: translate(-50%, -50%);
-            /* Mantém a imagem centralizada */
             width: auto;
-            height: 100%;
-            /* Faz a imagem se ajustar à altura do header */
+            height: 200px;
             object-fit: contain;
-            /* Garante que a imagem mantenha a proporção */
-            z-index: 10;
-            /* Mantém a imagem na frente */
+            z-index: 5;
+        }
+
+        .dr+ {
+            letter-spacing: 1px;
         }
     </style>
 </head>
 
 <body>
-    <!-- Tabela 1: Cabeçalho com Imagem Azul -->
     <table>
         <tr>
             <td class="header">
@@ -133,54 +167,52 @@
             </td>
         </tr>
     </table>
-
-    <!-- Tabela 2: Corpo do E-mail -->
     <table>
         <tr>
             <td class="content">
-                <h3 style="color: #5a679c;">Agora você tem acesso à saúde de qualidade onde quer que esteja, de forma
-                    rápida, segura e com conforto que você merece</h3>
-                <p style="color: #5a679c;">
-                    <strong>Com o Dr+, você pode:</strong>
+                <h3>Agora você tem acesso à saúde de <br> qualidade onde quer que esteja, de
+                    forma <br>
+                    rápida, segura e com conforto que você <br> merece</h3>
+                <p>
+                    <strong style="font-size: 15px;">Com o Dr+, você pode:</strong>
                 </p>
-                <ul style="color: #5a679c;">
-                    <li>Agendar consultas online com facilidade em diversas especialidades médicas.</li>
-                    <li>Realizar suas consultas de qualquer lugar, sem precisar sair de casa.</li>
-                    <li>Navegar em um ambiente totalmente seguro, garantindo a privacidade e a confidencialidade dos
-                        seus dados de saúde.</li>
+                <ul>
+                    <li>Agendar consultas online com facilidade em diversas <br> especialidades médicas.</li>
+                    <li>Realizar suas consultas de qualquer lugar, sem precisar <br> sair de casa.</li>
+                    <li>Navegar em um ambiente totalmente seguro, <br> garantindo a privacidade e a confidencialidade
+                        dos seus <br> dados de saúde.</li>
                 </ul>
-                <p style="color: #5a679c;">
-                    Estamos aqui para facilitar seu dia a dia e garantir que você receba o melhor atendimento médico,
-                    com praticidade e confiança.
+                <p style="text-align: left;">
+                    Estamos aqui para facilitar seu dia a dia e garantir que você <br>
+                    receba o melhor atendimento médico, com praticidade e <br> confiança.
                 </p>
-                <p style="color: #5a679c;">
+                <p>
                     Acesse o app e explore todas as facilidades que ele oferece.
                 </p>
                 <p>
-                    <strong style="color: #5a679c;">Saúde na palma da sua mão!</strong>
+                    <strong style="font-size: 15px;">Saúde na palma da sua mão!</strong>
                 </p>
-
-                <p style="color: #5a679c;">
-                    Ah, e se precisar esclarecer alguma dúvida fale com nossa central de atendimento pelo
+                <p>
+                    Ah, e se precisar esclarecer alguma dúvida fale com nossa <br> central de atendimento pelo
                     <a href="https://wa.me/556231426219" target="_blank" style="text-decoration: none; color: #5a679c;">
                         <br><img src="https://api.drmais.com.br/public/pessoa_fisica_anexo/103.png" width="20px"
                             style="vertical-align: middle; margin-left: 5px;">
-                        <strong>Whatsapp (62)3142-6219<strong>
+                        <strong>Whatsapp (62) 3142-6219</strong>
+                    </a>
                 </p>
 
-                <!-- Botão de Ação -->
-                <h5 style="color: #5a679c;">Atenciosamente,<br>Equipe
-                    <br><br><img src="dr+.png" width="40px" style="vertical-align: middle; margin-left: 5px;">
-                </h5>
+                <div class="dr+">
+                    <h5 style="color: #5a679c; font-size: 12px;">Atenciosamente,<br>Equipe
+                        <br><br><img src="dr+image-removebg-preview.png" width="40px"
+                            style="vertical-align: middle; margin-left: 5px;">
+                    </h5>
+                </div>
+                <div class="img-background">
+                    <img src="celular amarelo.png" alt="Fundo amarelo">
+                </div>
             </td>
         </tr>
     </table>
-
-    <!-- Tabela 3: Imagem de Fundo e Imagem da Mulher com Tablet sobreposta -->
-    <div class="img-background">
-        <img src="fundo amarelo.png" alt="Fundo amarelo">
-        <img src="imagem mulher com tablet.png" alt="Consulta médica online" class="tablet-img">
-    </div>
 </body>
 
 </html>
