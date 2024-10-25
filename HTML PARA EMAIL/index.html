@@ -17,30 +17,37 @@
       .header-title {
         font-size: 1rem !important; /* Reduz o tamanho da fonte */
         position: absolute; /* Controla o posicionamento */
-        top: 10px; /* Distância do topo */
-        left: 10px; /* Alinhado à esquerda */
+        top: 10px !important; /* Distância do topo */
+        left: 10px !important; /* Alinhado à esquerda */
       }
       .header-welcome {
         font-size: 18px !important; /* Reduz o tamanho */
         position: absolute;
-        top: 75px; /* Ajuste para ficar abaixo do nome */
-        left: 10px; /* Alinhado à esquerda */
+        top: 75px !important; /* Ajuste para ficar abaixo do nome */
+        left: 10px !important; /* Alinhado à esquerda */
       }
       .header-seumd {
         font-size: 16px !important;
         position: absolute;
-        top: 105px; /* Ajuste para ficar 2px abaixo do Bem-vindo */
-        left: 10px; /* Alinhado à esquerda */
+        top: 105px !important; /* Ajuste para ficar 2px abaixo do Bem-vindo */
+        left: 10px !important; /* Alinhado à esquerda */
       }
 
 .content-text h3 {
     margin: 0 !important;
-    font-size: 1rem;
+    font-size: 1rem !important;
+    margin-bottom: 0px !important;
 }
+strong {
+    margin: 0 !important;
+    font-size: 1rem !important;
+}
+
 
 .content-text p {
     margin: 0 !important;
-    font-size: 1rem;
+    font-size: 1rem !important;
+    margin-bottom: 10px !important;
 }
 
       .img-section1 {
@@ -52,7 +59,7 @@
 .img-mlr-tablet {
   height: 100% !important;
   width: 100% !important;
-  clip-path: inset(0 0 0 0);
+  clip-path: inset(0 0 0 0) !important;
 }
 
       .img-section2 {
@@ -63,15 +70,15 @@
   width: calc(100% + 10px) !important; /* Aumenta a largura para compensar o corte nos dois lados */
   height: 66vh !important;
   position: relative; /* Move a imagem 5px para a esquerda */
-  left: -7px;
-  clip-path: inset(0 3px 0 8px); /* Corta 5px de ambos os lados */
+  left: -7px !important;
+  clip-path: inset(0 3px 0 8px) !important; /* Corta 5px de ambos os lados */
 }
       .content-text {
         padding: 0 !important;
         text-align: center;
       }
       .whatsapp-img {
-        padding-top: 0px;
+        padding-top: 0px !important;
         width: 20px !important;
         vertical-align: middle !important;
       }
@@ -99,7 +106,7 @@
           style="background-color: #4368a3; color: rgb(255, 255, 255)"
         >
           <tr>
-            <td class="td-header" style="padding: 0px; text-align: left">
+            <td class="td-header" style="padding: 20px; text-align: left">
               <h1 class="header-title" style="font-size: 20px;">Olá, {{nm_pessoa}}</h1>
               <h1 class="header-welcome" style="font-size: 25px;">Bem-vindo(a) ao Dr+</h1>
               <h2 class="header-seumd" style="font-size: 17px;">O seu médico on-line</h2>
@@ -130,7 +137,6 @@
                 esteja, de forma rápida, segura e com o conforto que você
                 merece.
               </h3>
-              <br>
               <p><strong>Com o Dr+, você pode:</strong></p>
               <ul>
                 <li>
@@ -153,8 +159,8 @@
               </p>
               <p>
                 Acesse o app e explore todas as facilidades que ele oferece.
-              </p> <br>
-              <p><strong>Saúde na palma da sua mão! <br> <br> </strong></p>
+              </p>
+              <p><strong>Saúde na palma da sua mão! <br></strong></p>
               <p>
                 Ah, e se precisar esclarecer alguma dúvida fale com nossa
                 central de atendimento pelo <br>
@@ -171,14 +177,13 @@
                 </a>
               </p>
             </td>
-            <td class="img-section2" style="width: 150px; height: 150px; padding: 0">
-                <img
-                  src="https://api.drmais.com.br/public/pessoa_fisica_anexo/122.png"
-                  alt="Fundo amarelo"
-                  class="img-amarela"
-                  style="width: 100%; height: 60.1vh; object-fit: cover; display: block"
-                />
-              </td>
+            <td class="img-section2" style="width: 150px; height: 100%; padding: 0">
+              <img
+                src="https://api.drmais.com.br/public/pessoa_fisica_anexo/122.png"
+                alt="Fundo amarelo"
+                style="width: 100%; height: 64.3vh; object-fit: cover; display: block"
+              />
+            </td>
           </tr>
         </table>
         <!-- Footer Section -->
