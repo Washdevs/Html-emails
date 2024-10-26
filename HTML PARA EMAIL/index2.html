@@ -36,7 +36,7 @@
 
         .content-text h3 {
           margin: 0 !important;
-          font-size: 1rem !important;
+          font-size: 1px !important;
           margin-bottom: 0px !important;
         }
 
@@ -47,7 +47,7 @@
 
         .content-text p {
           margin: 0 !important;
-          font-size: 1rem !important;
+          font-size: 1px !important;
           margin-bottom: 10px !important;
         }
 
@@ -68,11 +68,9 @@
         }
 
         .img-amarela {
-          width: calc(100% + 10px) !important;
-          height: 75vh !important;
+          width: calc(100% + -10px) !important;
+          height: 216vh !important;
           position: relative;
-          left: -7px !important;
-          clip-path: inset(0 3px 0 8px) !important;
         }
         .content-text {
           padding: 0 !important;
@@ -125,14 +123,17 @@
                   O seu médico on-line
                 </h2>
               </td>
-              <td class="img-section1" style="width: 150px; height: 150px">
+              <td
+                class="img-section1"
+                style="width: 150px; height: 150px; margin-bottom: 2px"
+              >
                 <img
                   src="https://api.drmais.com.br/public/pessoa_fisica_anexo/123.png"
                   alt="Consulta médica online"
                   class="img-mlr-tablet"
                   style="
                     width: 100%;
-                    height: 22vh;
+                    height: 27vh;
                     display: block;
                     object-fit: cover;
                   "
@@ -199,7 +200,12 @@
               </td>
               <td
                 class="img-section2"
-                style="width: 150px; height: 100%; padding: 0"
+                style="
+                  width: 150px;
+                  height: 100%;
+                  padding: 0;
+                  border: 1px solid black;
+                "
               >
                 <img
                   src="https://api.drmais.com.br/public/pessoa_fisica_anexo/122.png"
@@ -207,8 +213,8 @@
                   class="img-amarela"
                   style="
                     width: 100%;
-                    height: 64.3vh;
-                    object-fit: cover;
+                    height: 58.2vh;
+                    object-fit: fill;
                     display: block;
                   "
                 />
