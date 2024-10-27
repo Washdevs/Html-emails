@@ -59,8 +59,8 @@
       }
 
       .mobile-td-header {
-        padding: 10px !important;
-        text-align: center !important;
+        text-align: left !important;
+        padding-left: 0 !important;
       }
 
       .mobile-header-title {
@@ -126,7 +126,14 @@
         width: 100% !important;
         height: 70vh !important;
         object-fit: cover;
-        object-position: -25px -5px;
+
+        position: fixed;
+        /* Faz a imagem ficar fixa */
+        top: 0;
+        /* Posição fixa no topo */
+        left: 0;
+        /* Posição fixa à esquerda */
+        z-index: -1;
       }
 
       .mobile-content-text {
@@ -135,15 +142,17 @@
       }
 
       .mobile-whatsapp-img {
-        width: 20px !important;
-        vertical-align: middle !important;
-        margin-right: 5px !important;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+        opacity: 0.6;
       }
 
       .mobile-td-conteudo {
-        padding: 20px 20px 20px 5px !important;
-        background-color: #f2f2f2 !important;
-        border-radius: 5px !important;
+        padding-top: 70vh;
+        display: block;
       }
     }
   </style>
@@ -158,11 +167,12 @@
         <table class="header-section" width="600" cellspacing="0" cellpadding="0" border="0"
           style="background-color: #4368a3; color: #ffffff; width: 100%;">
           <tr>
-            <td class="td-header" style="padding: 20px; text-align: left; vertical-align: middle;">
-              <h1 class="header-title" style="font-size: 24px; margin: 0;">
+            <td class="td-header" style="text-align: left !important;
+    padding-left: 10px ">
+              <h1 class="header-title" style="font-size: 24px; margin: 0">
                 Olá, {{nm_pessoa}}
               </h1>
-              <h1 class="header-welcome" style="font-size: 30px; margin: 10px 0 0 0;">
+              <h1 class="header-welcome" style="font-size: 30px; margin: 10px 0 0 0; padding-top: 20px">
                 Bem-vindo(a) ao Dr+
               </h1>
               <h2 class="header-seumd" style="font-size: 22px; margin: 10px 0 0 0;">
@@ -226,12 +236,19 @@
                   <strong>Saúde na palma da sua mão!</strong>
                 </p>
                 <p>
-                  Ah, e se precisar esclarecer alguma dúvida, fale com nossa
-                  central de atendimento pelo <br />
-                  <a href="https://wa.me/556231426219" style="text-decoration: none; color: #2d5ca9;">
-                    <img src="https://api.drmais.com.br/public/pessoa_fisica_anexo/103.png" width="20"
-                      class="whatsapp-img" alt="Ícone WhatsApp" style="vertical-align: middle; margin-right: 5px;" />
-                    <strong>Whatsapp (62) 3142-6219</strong>
+                  Ah, e se precisar esclarecer alguma dúvida, fale com nossa central de atendimento pelo <br />
+                  <a href="https://wa.me/556231426219" class="whatsapp-link" style="text-decoration: none; color: #2d5ca9; position: relative;
+  display: inline-block">
+                    <span>
+                      <img src="https://api.drmais.com.br/public/pessoa_fisica_anexo/103.png" width="20"
+                        class="whatsapp-img" alt="Ícone WhatsApp" style="position: absolute;
+                        left: 0; 
+                        top: 50%; 
+                        transform: translateY(-50%); 
+                        z-index: -1; 
+                        opacity: 0.6; " />
+                      <strong>WhatsApp 62 3142-6219</strong>
+                    </span>
                   </a>
                 </p>
               </div>
@@ -343,12 +360,19 @@
                   <strong>Saúde na palma da sua mão!</strong>
                 </p>
                 <p>
-                  Ah, e se precisar esclarecer alguma dúvida, fale com nossa
-                  central de atendimento pelo <br />
-                  <a href="https://wa.me/556231426219" style="text-decoration: none; color: #2d5ca9;">
-                    <img src="https://api.drmais.com.br/public/pessoa_fisica_anexo/103.png" width="20"
-                      class="mobile-whatsapp-img" alt="Ícone WhatsApp" />
-                    <strong>WhatsApp 62 3142-6219</strong>
+                  Ah, e se precisar esclarecer alguma dúvida, fale com nossa central de atendimento pelo <br />
+                  <a href="https://wa.me/556231426219" class="whatsapp-link" style="text-decoration: none; color: #2d5ca9; position: relative;
+  display: inline-block">
+                    <span>
+                      <img src="https://api.drmais.com.br/public/pessoa_fisica_anexo/103.png" width="20"
+                        class="whatsapp-img" alt="Ícone WhatsApp" style="position: absolute;
+                        left: 0; 
+                        top: 50%; 
+                        transform: translateY(-50%); 
+                        z-index: -1; 
+                        opacity: 0.6; " />
+                      <strong>WhatsApp 62 3142-6219</strong>
+                    </span>
                   </a>
                 </p>
               </div>
