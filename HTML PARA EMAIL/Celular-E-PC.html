@@ -1,498 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Email Dr+</title>
-    <style>
-      /* Estilos gerais */
-      body {
-        padding: 0;
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: aliceblue;
-      }
 
-      table {
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto;
-        border-collapse: collapse;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Email Dr+</title>
+</head>
 
-      img {
-        display: block;
-        border: 0;
-        line-height: 100%;
-        text-decoration: none;
-      }
-
-      /* Esconder ambas as seções por padrão */
-      .desktop-only,
-      .mobile-only {
-        display: none;
-      }
-
-      /* Media Query para dispositivos com largura máxima de 600px (Mobile) */
-      @media only screen and (max-width: 600px) {
-        .mobile-only {
-          display: table !important;
-        }
-      }
-
-      /* Media Query para dispositivos com largura mínima de 601px (Desktop) */
-      @media only screen and (min-width: 601px) {
-        .desktop-only {
-          display: table !important;
-        }
-      }
-
-      /* ------------------------------------------------------------------------------------------------------------------------------------------ */
-      /* Estilos específicos para mobile */
-      @media only screen and (max-width: 600px) {
-        .mobile-header-section,
-        .mobile-content-section,
-        .mobile-footer-section {
-          width: 100% !important;
-        }
-
-        .mobile-td-header {
-          text-align: left !important;
-          padding-left: 0 !important;
-        }
-
-        .mobile-img-section1 {
-          width: 30% !important;
-        }
-
-        .mobile-img-mlr-tablet {
-          width: 100% !important;
-          height: auto !important;
-        }
-
-        .mobile-img-section2 {
-          width: 30% !important;
-          height: 100% !important;
-          background-color: rgb(255, 215, 32);
-          overflow: hidden;
-        }
-
-        .mobile-content-text {
-          padding: 10px !important;
-          text-align: left !important;
-        }
-
-        .mobile-td-conteudo {
-          padding-top: 70vh;
-          display: block;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <!-- Seção Desktop -->
-    <table class="desktop-only" cellspacing="0" cellpadding="0" border="0">
+<body style="padding: 0; margin: 0; font-family: Arial, sans-serif; background-color: aliceblue;">
+  <div style="width: 100%; margin: auto;">
+    <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%"
+      style="width: 100%; max-width: 600px; border-collapse: collapse; background-color: aliceblue; margin: 0 auto;">
+      <tr style="height: 150px;">
+        <td style="background-color: #4368a3; color: #ffffff; text-align: left; padding: 10px; height: 150px;">
+          <h1 style="font-size: 20px; margin-top: 10px; padding-left: 1px;">Olá, {{nm_pessoa}}</h1>
+          <h1 style="font-size: 20px; margin: 10px 0 0 0; padding-top: 20px; padding-left: 1px;">Bem-vindo(a) ao Dr+
+          </h1>
+          <h2 style="font-size: 18px; margin: 10px 0 10px 0; padding-left: 1px;">O seu médico on-line</h2>
+        </td>
+        <td style="width: 150px; height: 150px;">
+          <img src="https://api.drmais.com.br/public/pessoa_fisica_anexo/123.png" alt="Consulta médica online"
+            style="width: 100%; height: 100%; object-fit: cover; display: block; border: 0;" />
+        </td>
+      </tr>
       <tr>
-        <td align="center">
-          <!-- Header Section -->
-          <table
-            class="header-section"
-            width="600"
-            cellspacing="0"
-            cellpadding="0"
-            border="0"
-            style="background-color: #4368a3; color: #ffffff; width: 100%"
-          >
-            <tr>
-              <td
-                class="td-header"
-                style="text-align: left !important; padding-left: 10px"
-              >
-                <h1
-                  class="header-title"
-                  style="font-size: 20px; margin-top: 15px; padding-left: 1px"
-                >
-                  Olá, {{nm_pessoa}}
-                </h1>
-                <h1
-                  class="header-welcome"
-                  style="
-                    font-size: 28px;
-                    margin: 10px 0 0 0;
-                    padding-top: 20px;
-                    padding-left: 1px;
-                  "
-                >
-                  Bem-vindo(a) ao Dr+
-                </h1>
-                <h2
-                  class="header-seumd"
-                  style="
-                    font-size: 20px;
-                    margin: 10px 0 10px 0;
-                    padding-left: 1px;
-                  "
-                >
-                  O seu médico on-line
-                </h2>
-              </td>
-              <td class="img-section1" style="width: 150px; height: 150px">
-                <img
-                  src="https://api.drmais.com.br/public/pessoa_fisica_anexo/123.png"
-                  alt="Consulta médica online"
-                  class="img-mlr-tablet"
-                  style="width: 100%; height: auto; object-fit: cover"
-                />
-              </td>
-            </tr>
-          </table>
-          <!-- Main Content Section -->
-          <table
-            class="content-section"
-            width="600"
-            cellspacing="0"
-            cellpadding="20"
-            border="0"
-            style="background-color: #ffffff; width: 100%"
-          >
-            <tr>
-              <td
-                class="td-conteudo"
-                style="
-                  padding: 20px;
-                  text-align: left;
-                  background-color: #f2f2f2;
-                  border-radius: 5px;
-                "
-              >
-                <div class="content-text" style="padding: 0">
-                  <h3
-                    style="
-                      margin: 0 0 10px 0;
-                      font-size: 18px;
-                      line-height: 1.5;
-                      color: #2d5ca9;
-                      line-height: 26px;
-                    "
-                  >
-                    Agora você tem acesso à saúde de qualidade onde quer que
-                    esteja, de forma rápida, segura e com o conforto que você
-                    merece.
-                  </h3>
-                  <p style="color: #2d5ca9">
-                    <strong>Com o Dr+, você pode:</strong>
-                  </p>
-                  <ul
-                    style="
-                      padding-left: 20px;
-                      line-height: 1.5;
-                      color: rgb(120, 180, 236);
-                    "
-                  >
-                    <li style="color: rgb(120, 180, 236)">
-                      Agendar consultas online com facilidade em diversas
-                      especialidades médicas.
-                    </li>
-                    <li style="color: rgb(120, 180, 236)">
-                      Realizar suas consultas de qualquer lugar, sem precisar
-                      sair de casa.
-                    </li>
-                    <li style="color: rgb(120, 180, 236); line-height: 22px">
-                      Navegar em um ambiente totalmente seguro, garantindo a
-                      privacidade e a confidencialidade dos seus dados de saúde.
-                    </li>
-                  </ul>
-                  <p style="color: rgb(120, 180, 236); line-height: 22px">
-                    Estamos aqui para facilitar seu dia a dia e garantir que
-                    você receba o melhor atendimento médico, com praticidade e
-                    confiança.
-                  </p>
-                  <p style="color: rgb(120, 180, 236); line-height: 22px">
-                    Acesse o app e explore todas as facilidades que ele oferece.
-                  </p>
-                  <p style="color: #2d5ca9">
-                    <strong>Saúde na palma da sua mão!</strong>
-                  </p>
-                  <p style="color: rgb(107, 170, 230); line-height: 22px">
-                    Ah, e se precisar esclarecer alguma dúvida, fale com nossa
-                    central de atendimento pelo <br />
-                    <a
-                      href="https://wa.me/556231426219"
-                      class="whatsapp-link"
-                      style="
-                        text-decoration: none;
-                        color: #2d5ca9;
-                        position: relative;
-                        display: inline-flex;
-                        align-items: center;
-                        margin-top: 10px;
-                      "
-                    >
-                      <img
-                        src="https://api.drmais.com.br/public/pessoa_fisica_anexo/103.png"
-                        width="20"
-                        class="whatsapp-img"
-                        alt="Ícone WhatsApp"
-                        style="margin-right: 5px; opacity: 0.6"
-                      />
-                      <strong>WhatsApp (62) 3142-6219</strong>
-                    </a>
-                  </p>
-                </div>
-              </td>
-              <td
-                class="img-section2"
-                style="
-                  width: 150px;
-                  height: 100%;
-                  padding: 0;
-                  background-color: rgb(255, 215, 32);
-                "
-              >
-                <img
-                  src="https://api.drmais.com.br/public/pessoa_fisica_anexo/122.png"
-                  alt="Fundo amarelo"
-                  class="img-amarela"
-                  style="width: 100%; height: 56vh; object-fit: cover"
-                />
-              </td>
-            </tr>
-          </table>
-          <!-- Footer Section -->
-          <table
-            class="footer-section"
-            width="600"
-            cellspacing="0"
-            cellpadding="20"
-            border="0"
-            style="
-              background-color: #f7f7f8;
-              color: #2d5ca9;
-              font-size: 12px;
-              width: 100%;
-            "
-          >
-            <tr>
-              <td style="padding: 10px 20px; text-align: center">
-                <p style="margin: 0">
-                  Atenciosamente,<br />
-                  Equipe Dr+
-                </p>
-                <img
-                  src="https://api.drmais.com.br/public/pessoa_fisica_anexo/124.png"
-                  width="50"
-                  alt="Logo Dr+"
-                  style="max-width: 100%; margin-top: 10px"
-                />
-              </td>
-            </tr>
-          </table>
+        <td colspan="1" style="background-color: #ffffff; padding: 10px; text-align: left;">
+          <div style="padding: 20px;">
+            <h3 style="margin: 0 0 10px 0; font-size: 18px; color: #2d5ca9;">
+              Agora você tem acesso à saúde de qualidade onde quer que esteja, de forma rápida, segura e com o conforto
+              que você merece.
+            </h3>
+            <p style="color: #2d5ca9;"><strong>Com o Dr+, você pode:</strong></p>
+            <ul style="padding-left: 20px; line-height: 1.5;">
+              <li style="color: rgb(120, 180, 236);">Agendar consultas online com facilidade em diversas especialidades
+                médicas.</li>
+              <li style="color: rgb(120, 180, 236);">Realizar suas consultas de qualquer lugar, sem precisar sair de
+                casa.</li>
+              <li style="color: rgb(120, 180, 236);">Navegar em um ambiente totalmente seguro, garantindo a privacidade
+                e a confidencialidade dos seus dados de saúde.</li>
+            </ul>
+            <p style="color: rgb(120, 180, 236);">Estamos aqui para facilitar seu dia a dia e garantir que você receba o
+              melhor atendimento médico, com praticidade e confiança.</p>
+            <p style="color: #2d5ca9;"><strong>Saúde na palma da sua mão!</strong></p>
+            <p style="color: rgb(107, 170, 230);">Ah, e se precisar esclarecer alguma dúvida, fale com nossa central de
+              atendimento pelo <br> <a href="https://wa.me/556231426219"
+                style="color: #2d5ca9; text-decoration: none;"><img
+                  src="https://api.drmais.com.br/public/pessoa_fisica_anexo/103.png" width="20"
+                  style="vertical-align: middle; margin-right: 5px;" /> <strong>WhatsApp (62) 3142-6219</strong></a></p>
+            <h5 style="margin: 10px 0;">Siga nas redes sociais!</h5>
+            <div style="display: flex; gap: 3px;">
+              <a href="https://www.facebook.com/DrMais.com.br/" target="_blank"><img
+                  src="https://img.mysignature.io/s/e/6/6/e66d0853-7f94-50c2-ad8e-387e191967a5.png" alt="Facebook"
+                  style="width: 30px;" /></a>
+              <a href="https://www.instagram.com/drmais_online/" target="_blank"><img
+                  src="https://img.mysignature.io/s/5/d/b/5db033bf-258f-510a-9169-55e20ccdc6d8.png" alt="Instagram"
+                  style="width: 30px;" /></a>
+              <a href="https://twitter.com/DrMais_com_br" target="_blank"><img
+                  src="https://img.mysignature.io/s/d/c/9/dc98f7d6-5e24-5fa8-b529-fdcd45c8f82d.png" alt="Twitter"
+                  style="width: 30px;" /></a>
+              <a href="https://www.tiktok.com/@drmaisonline" target="_blank"><img
+                  src="https://img.mysignature.io/s/f/b/1/fb1de172-037c-5ffa-8296-7ca44e3f7de4.png" alt="TikTok"
+                  style="width: 30px;" /></a>
+              <a href="https://www.youtube.com/@drmais" target="_blank"><img
+                  src="https://img.mysignature.io/s/0/6/9/06936210-ff82-5032-87fd-0fc7bae47927.png" alt="YouTube"
+                  style="width: 30px;" /></a>
+            </div>
+          </div>
+        </td>
+        <td style="width: 27%; background-color: rgb(255, 215, 32); padding: 0">
+          <img src="https://api.drmais.com.br/public/pessoa_fisica_anexo/122.png" alt="Fundo amarelo"
+            style="width: 100%; height: auto; object-fit: cover; display: block;" />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"
+          style="background-color: #f7f7f8; color: #2d5ca9; font-size: 12px; text-align: center; padding: 10px;">
+          <div style="display: inline-block; vertical-align: middle;">
+            <img src="https://api.drmais.com.br/public/pessoa_fisica_anexo/124.png" width="50" alt="Logo Dr+"
+              style="margin-right: 10px; vertical-align: middle;" />
+          </div>
+          <div style="display: inline-block; vertical-align: middle;">
+            <p style="margin: 0;">Atenciosamente,<br />Equipe Dr+</p>
+          </div>
         </td>
       </tr>
     </table>
-    <!-- --------------------------------------------------------------------------------------------------------------------------------------------- -->
-    <!-- Seção Mobile -->
-    <table class="mobile-only" cellspacing="0" cellpadding="0" border="0">
-      <tr>
-        <td align="center">
-          <!-- Mobile Header Section -->
-          <table
-            class="mobile-header-section"
-            width="600"
-            cellspacing="0"
-            cellpadding="0"
-            border="0"
-            style="background-color: #4368a3; color: #ffffff; width: 100%"
-          >
-            <tr>
-              <td
-                class="mobile-td-header"
-                style="padding: 2px; text-align: start; vertical-align: middle"
-              >
-                <h1
-                  class="mobile-header-title"
-                  style="
-                    font-size: 20px;
-                    margin-top: 15px;
-                    margin-bottom: 5px;
-                    padding-left: 5px;
-                  "
-                >
-                  Olá, {{nm_pessoa}}
-                </h1>
-                <h1
-                  class="mobile-header-welcome"
-                  style="
-                    font-size: 22px;
-                    margin-top: 29px;
-                    margin-bottom: 10px;
-                    padding-left: 5px;
-                  "
-                >
-                  Bem-vindo(a) ao Dr+
-                </h1>
-                <h2
-                  class="mobile-header-seumd"
-                  style="
-                    font-size: 18px;
-                    margin-top: 10px;
-                    margin-bottom: 0px;
-                    padding-left: 5px;
-                  "
-                >
-                  O seu médico on-line
-                </h2>
-              </td>
-              <td
-                class="mobile-img-section1"
-                style="width: 100%; height: auto; padding: 0"
-              >
-                <img
-                  src="https://api.drmais.com.br/public/pessoa_fisica_anexo/123.png"
-                  alt="Consulta médica online"
-                  class="mobile-img-mlr-tablet"
-                  style="width: 100%; height: auto; object-fit: cover"
-                />
-              </td>
-            </tr>
-          </table>
-          <!-- Mobile Main Content Section -->
-          <table
-            class="mobile-content-section"
-            width="600"
-            cellspacing="0"
-            cellpadding="20"
-            border="0"
-            style="background-color: #ffffff; width: 100%"
-          >
-            <tr>
-              <td
-                class="mobile-td-conteudo"
-                style="
-                  padding: 10px;
-                  text-align: left;
-                  background-color: #f2f2f2;
-                  border-radius: 5px;
-                "
-              >
-                <div class="mobile-content-text" style="padding: 0">
-                  <h3
-                    style="
-                      margin: 0 0 10px 0;
-                      font-size: 18px;
-                      line-height: 1.5;
-                      line-height: 20px;
-                    "
-                  >
-                    Agora você tem acesso à saúde de qualidade onde quer que
-                    esteja, de forma rápida, segura e com o conforto que você
-                    merece.
-                  </h3>
-                  <p style="color: #2d5ca9">
-                    <strong>Com o Dr+, você pode:</strong>
-                  </p>
-                  <ul
-                    style="
-                      padding-left: 20px;
-                      line-height: 1.5;
-                      line-height: 22px;
-                    "
-                  >
-                    <li style="color: rgb(120, 180, 236); line-height: 22px">
-                      Agendar consultas online com facilidade em diversas
-                      especialidades médicas.
-                    </li>
-                    <li style="color: rgb(120, 180, 236); line-height: 22px">
-                      Realizar suas consultas de qualquer lugar, sem precisar
-                      sair de casa.
-                    </li>
-                    <li style="color: rgb(120, 180, 236); line-height: 22px">
-                      Navegar em um ambiente totalmente seguro, garantindo a
-                      privacidade e a confidencialidade dos seus dados de saúde.
-                    </li>
-                  </ul>
-                  <p style="color: rgb(120, 180, 236); line-height: 22px">
-                    Estamos aqui para facilitar seu dia a dia e garantir que
-                    você receba o melhor atendimento médico, com praticidade e
-                    confiança.
-                  </p>
-                  <p style="color: rgb(120, 180, 236); line-height: 22px">
-                    Acesse o app e explore todas as facilidades que ele oferece.
-                  </p>
-                  <p style="color: #2d5ca9">
-                    <strong>Saúde na palma da sua mão!</strong>
-                  </p>
-                  <p style="color: rgb(120, 180, 236); line-height: 22px">
-                    Ah, e se precisar esclarecer alguma dúvida, fale com nossa
-                    central de atendimento pelo <br />
-                    <a
-                      href="https://wa.me/556231426219"
-                      class="whatsapp-link"
-                      style="
-                        text-decoration: none;
-                        color: #2d5ca9;
-                        position: relative;
-                        display: inline-flex;
-                        align-items: center;
-                      "
-                    >
-                      <img
-                        src="https://api.drmais.com.br/public/pessoa_fisica_anexo/103.png"
-                        width="20"
-                        class="whatsapp-img"
-                        alt="Ícone WhatsApp"
-                        style="margin-right: 5px; opacity: 0.6"
-                      />
-                      <strong>WhatsApp (62) 3142-6219</strong>
-                    </a>
-                  </p>
-                </div>
-              </td>
-              <td
-                class="mobile-img-section2"
-                style="width: 100%; height: auto; padding: 0"
-              >
-                <img
-                  src="https://api.drmais.com.br/public/pessoa_fisica_anexo/122.png"
-                  alt="Fundo amarelo"
-                  class="mobile-img-amarela"
-                  style="width: 100%; height: auto; object-fit: cover"
-                />
-              </td>
-            </tr>
-          </table>
-          <!-- Mobile Footer Section -->
-          <table
-            class="mobile-footer-section"
-            width="600"
-            cellspacing="0"
-            cellpadding="20"
-            border="0"
-            style="
-              background-color: #f7f7f8;
-              color: #2d5ca9;
-              font-size: 12px;
-              width: 100%;
-            "
-          >
-            <tr>
-              <td style="padding: 10px 20px; text-align: center">
-                <p style="margin: 0">
-                  Atenciosamente,<br />
-                  Equipe Dr+
-                </p>
-                <img
-                  src="https://api.drmais.com.br/public/pessoa_fisica_anexo/124.png"
-                  width="50"
-                  alt="Logo Dr+"
-                  style="max-width: 100%; margin-top: 10px"
-                />
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </body>
+  </div>
+</body>
 </html>
