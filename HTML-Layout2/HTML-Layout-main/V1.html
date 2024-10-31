@@ -7,25 +7,26 @@
   <title>Especialidades</title>
 </head>
 
-<body style="max-width: 600px; background-color: #ffffff; margin: 0; padding: 0; font-family: Arial, sans-serif;">
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #ffffff;">
 
-  <!-- Header -->
-  <table width="600" cellpadding="0" cellspacing="0" border="0" style="background-color: #DC2B5B; height: 100px;">
+  <!-- Tabela Principal -->
+  <table width="600" cellpadding="0" cellspacing="0" border="0" style="background-color: #ffffff; padding: 1px 0;">
+    <!-- Parte Superior com Fundo Rosa -->
     <tr>
-      <td align="left" style="padding-right: 20px; color: #FFFFFF;">
-        <p style="font-size: 24px; font-weight: bold; color: #FFFFFF; margin: 0;">Nossas</p>
-        <p style="font-size: 18px; color: #FFFFFF; margin: 0;">Especialidades Médicas</p>
+      <td style="height: 100px; background-color: #f4a6c7;">
+        <p>
+          Olá, {{Nome do User}}! <br>
+          Você sabia que agora pode ter acesso a uma equipe de especialistas sem sair de casa? No Dr+, oferecemos
+          consultas online em diversas especialidades, tudo com a comodidade que você merece.
+        </p>
       </td>
     </tr>
-  </table>
-
-  <!-- Conteúdo Principal -->
-  <table width="600" cellpadding="0" cellspacing="0" border="0">
     <tr>
-      <td align="center" style="padding: 0;">
+      <td align="center">
+        <!-- Conteúdo Principal -->
         <table width="100%" cellpadding="5" cellspacing="0" border="0">
           <tr>
-            <!-- Imagens -->
+            <!-- Coluna das Imagens -->
             <td width="50%" align="center" valign="top" style="padding: 5px;">
               <table cellpadding="0" cellspacing="0" border="0">
                 <tr>
@@ -48,9 +49,19 @@
                 </tr>
               </table>
             </td>
-            <!-- Links de Especialidades -->
+
+            <!-- Coluna dos Botões de Especialidades -->
             <td width="50%" align="center">
               <table>
+                <!-- Título -->
+                <tr>
+                  <td>
+                    <p style="font-size: 24px; font-weight: bold; color: #241a1a; margin: 0">Nossas</p>
+                    <p style="font-size: 18px; color: #2c2525; margin: 0; padding-bottom: 20px">Especialidades Médicas
+                    </p>
+                  </td>
+                </tr>
+                <!-- Botões -->
                 <tr>
                   <td align="center"
                     style="padding: 5px 20px; background-color: #55679b; color: #FFFFFF; border-radius: 18px; width: 160px; text-align: center;">
@@ -153,18 +164,21 @@
             </td>
           </tr>
         </table>
+
+        <!-- Logo -->
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td align="right" style="padding: 5px 0; background-color: #DC2B5B">
+              <img src="https://api.drmais.com.br/public/pessoa_fisica_anexo/130.png" alt="Imagem Logo"
+                style="width: 80px; height: 60px; display: block">
+            </td>
+          </tr>
+        </table>
+
       </td>
     </tr>
   </table>
-  </table>
-  <table width="600" cellpadding="0" cellspacing="0" border="0" style="background-color: #DC2B5B; height: 80px;">
-    <tr>
-      <td align="right" style="padding-right: 20px;">
-        <img src="https://api.drmais.com.br/public/pessoa_fisica_anexo/130.png" alt="Imagem Logo"
-          style="width: 80px; height: 50px; display: block;">
-      </td>
-    </tr>
-  </table>
+
 </body>
 
 </html>
